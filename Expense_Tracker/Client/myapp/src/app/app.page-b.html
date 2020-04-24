@@ -1,0 +1,27 @@
+<br/>
+<table>
+    <tr>
+        <td class="my_header">Purchase Date</td>
+        <td class="my_header">Total Expense</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr *ngFor="let expense of _expensesArray">
+        <td>
+            {{expense.date}}
+        </td>
+        <td>
+            {{expense.amount | number : '1.2-2'}} CAD
+        </td>
+        <td>
+            <input type="button" (click)="checkExpense(expense.items)" value="Details">
+        </td>
+        <td>
+            <input type="button" (click)="deleteExpense(expense._id)" value="Delete">
+        </td>
+    </tr>
+</table>
+<br/>
+<div id="detail_table">
+
+</div>

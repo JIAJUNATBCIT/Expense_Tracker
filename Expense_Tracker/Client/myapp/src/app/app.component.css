@@ -1,0 +1,117 @@
+
+
+.errorMsg {
+    color: red;
+    width: 600px;
+}
+
+.title {
+    margin: 0.8em 1em 0.5em 0;
+	color: #333;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 36px;
+	line-height: 40px;
+	counter-increment: section-1;
+	counter-reset: section-2 section-3 section-4;
+}
+
+.subtitle {
+    margin: 0.8em 1em 0.5em 0;
+	color: #333;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	line-height: 40px;
+	counter-increment: section-3;
+	counter-reset: section-4;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.my_button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.my_button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even){background-color: #f2f2f2}
+  
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.my_header {
+    color:black;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.my_header_2 {
+    color:black;
+    font-size: 14px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.subtotal {
+    color:black;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    vertical-align:middle;
+  }
+  
+a:visited {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    vertical-align:middle;
+}
+  
+a:hover {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    vertical-align:middle;
+}
+  
+a:active {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    vertical-align:middle;
+}
+

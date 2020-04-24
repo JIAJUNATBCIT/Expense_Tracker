@@ -1,0 +1,65 @@
+<br/>
+<!-- Create Expense -->
+
+<!-- Edit data -->
+<label class="subtitle">Expense</label><br/>
+<label class="my_header_2">Product: </label><input type="text" [(ngModel)]="_singleProductName" value="{{_singleProductName}}">
+&nbsp; <label class="my_header_2">Category: </label><input type="text" [(ngModel)]="_singleProductCategory" value="{{_singleProductCategory}}">
+&nbsp; <label class="my_header_2">Unit Price: $</label><input type="text" [(ngModel)]="_singleProductPrice" value="{{_singleProductPrice}}">
+&nbsp; <label class="my_header_2">QTY: </label><input type="text" [(ngModel)]="_singleProductQty" value="{{_singleProductQty}}">
+&nbsp;<button class="button my_button" (click)="addItem()">{{_button_name}}</button>
+&nbsp;{{_expense_error}}
+<br/><br/>
+<hr/>
+
+<!-- Print the expense -->
+<table class="mytable">
+  <tr>
+    <td></td><td class="my_header">Category</td><td class="my_header">QTY</td><td class="my_header">Total</td><td></td>
+  </tr>
+  <tr *ngFor="let item of _expenseItems">
+      <td>
+          {{item.name}}
+      </td>
+      <td>
+          {{item.category}}
+      </td>
+      <td>
+          {{item.qty}}
+      </td>
+      <td>
+          ${{item.price*item.qty | number : '1.2-2'}}
+      </td>
+      <td>
+          <input type="image" src="../assets/remove-icon.png"
+          (click)="removeItem(item.name)">
+      </td>
+  </tr>
+  <tr>
+      <td class="my_header_2">Subtotal</td>
+      <td></td>
+      <td></td>
+      <td style="border-bottom:2px solid">${{_subtotal | number : '1.2-2'}}</td>
+      <td></td>
+  </tr>
+  <tr>
+      <td class="my_header_2">Tax 12%</td>
+      <td></td>
+      <td></td>
+      <td style="border-bottom:1px solid">${{_tax | number : '1.2-2'}}</td>
+      <td></td>
+  </tr>
+  <tr> 
+      <td class="my_header_2">Total</td>
+      <td></td>
+      <td></td>
+      <td class="subtotal">${{_finaltotal | number : '1.2-2'}}</td>
+      <td></td>
+  </tr>
+</table>
+<br/>
+{{_addr_desc}}<br/><br/>
+
+<button class="button my_button" (click)="submitExpense()" >SUBMIT EXPENSE</button>
+
+{{_errorMessage}}
